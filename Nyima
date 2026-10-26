@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ညီမလေးအတွက် သီတင်းကျွတ်လက်ဆောင် 🎁</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: sans-serif;
+  text-align: center;
+  color: #fff4d0;
+  background: linear-gradient(160deg, #130f35, #54265f, #160f30);
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 25px 18px 45px;
+}
+
+.moon {
+  position: fixed;
+  top: 35px;
+  right: 25px;
+  width: 65px;
+  height: 65px;
+  background: #ffe7a0;
+  border-radius: 50%;
+  box-shadow: 0 0 40px #ffd86b;
+}
+
+h1 {
+  margin-top: 45px;
+  color: #ffdc83;
+  line-height: 1.8;
+  font-size: 28px;
+}
+
+p {
+  line-height: 2;
+}
+
+.lantern {
+  font-size: 38px;
+  margin: 25px 0;
+  animation: swing 2s infinite alternate;
+}
+
+.card {
+  margin-top: 25px;
+  padding: 28px 18px;
+  color: #612847;
+  background: linear-gradient(145deg, #fff5d9, #f8d8a1);
+  border: 2px solid #f4c968;
+  border-radius: 20px;
+  box-shadow: 0 0 30px #ffce6940;
+}
+
+.gift {
+  font-size: 85px;
+  margin: 10px 0;
+}
+
+button {
+  border: none;
+  padding: 15px 25px;
+  border-radius: 10px;
+  color: #54223e;
+  background: linear-gradient(135deg, #ffdc78, #ff9c61);
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 0 #ad5c48;
+}
+
+button:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+#surprise {
+  display: none;
+  margin-top: 25px;
+  animation: appear 0.8s ease;
+}
+
+.money {
+  color: #c52d65;
+  font-size: 34px;
+  font-weight: bold;
+  margin: 18px 0;
+}
+
+.footer {
+  margin-top: 30px;
+  font-size: 13px;
+  color: #ead5ff;
+}
+
+@keyframes swing {
+  from { transform: rotate(-8deg); }
+  to { transform: rotate(8deg); }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.sparkle {
+  position: fixed;
+  top: -30px;
+  pointer-events: none;
+  animation: fall 4s linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="moon"></div>
+
+<div class="container">
+
+  <div class="lantern">🏮 ✨ 🏮</div>
+
+  <h1>
+    ပျော်ရွှင်စရာ<br>
+    သီတင်းကျွတ်ပါ ညီမလေး ❤️
+  </h1>
+
+  <p>
+    ညီမလေးအတွက်<br>
+    အစ်ကို့ဆီက Surprise လက်ဆောင်လေးရှိတယ်နော်။
+  </p>
+
+  <div class="card">
+
+    <div class="gift" id="gift">🎁</div>
+
+    <h2 id="title">လက်ဆောင်ဖွင့်ကြည့်မလား?</h2>
+
+    <p>ခလုတ်လေးကို နှိပ်လိုက်ပါနော် 💖</p>
+
+    <button id="openButton" onclick="openGift()">
+      🎀 လက်ဆောင်ဖွင့်မယ်
+    </button>
+
+    <div id="surprise">
+
+      <div style="font-size:45px">
+        🍰 🍫 🧁
+      </div>
+
+      <h2>Surprise ညီမလေးရေ! 💝</h2>
+
+      <p>ညီမလေးအတွက် မုန့်ဖိုးလက်ဆောင်</p>
+
+      <div class="money">၅၀,၀၀၀ ကျပ်</div>
+
+      <p>
+        သီတင်းကျွတ်အခါသမယမှာ<br>
+        စိတ်ချမ်းသာ ကိုယ်ကျန်းမာပါစေ။<br>
+        လိုရာဆန္ဒအားလုံး ပြည့်ဝပါစေ။<br>
+        ပျော်ရွှင်မှုတွေနဲ့ ပြည့်စုံပါစေနော်။ ❤️
+      </p>
+
+      <h3>ချစ်တဲ့ အစ်ကို 🥰</h3>
+
+      <p>မုန့်ဖိုးလေးကို အစ်ကိုက သီးသန့်လွှဲပေးမယ်နော်။</p>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    🪔 ညီမလေးရဲ့ နေ့ရက်တိုင်း အလင်းရောင်တွေနဲ့ လှပပါစေ 🪔
+  </div>
+
+</div>
+
+<script>
+function openGift() {
+
+  document.getElementById("surprise").style.display = "block";
+
+  document.getElementById("gift").textContent = "🎉";
+
+  document.getElementById("title").textContent =
+    "ညီမလေးအတွက် Surprise! ❤️";
+
+  document.getElementById("openButton").style.display = "none";
+
+  // ကြယ်လေးတွေ၊ မီးရောင်လေးတွေ ပေါ်လာမယ်
+  for (let i = 0; i < 35; i++) {
+
+    let star = document.createElement("div");
+
+    star.className = "sparkle";
+
+    star.textContent = ["✨", "💛", "🏮", "🎊", "⭐"][
+      Math.floor(Math.random() * 5)
+    ];
+
+    star.style.left = Math.random() * 100 + "vw";
+
+    star.style.animationDuration =
+      (2 + Math.random() * 4) + "s";
+
+    star.style.fontSize =
+      (15 + Math.random() * 20) + "px";
+
+    document.body.appendChild(star);
+
+    setTimeout(function() {
+      star.remove();
+    }, 6500);
+  }
+}
+</script>
+
+</body>
+</html>
